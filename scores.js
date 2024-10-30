@@ -25,9 +25,9 @@
             const tableRow = assignmentsTable.querySelector(`[aria-label="${assignment.title}"]`);
             const resultsCell = tableRow.getElementsByClassName("results-cell")[0].firstElementChild.firstElementChild.firstElementChild;
             const a = document.createElement("a");
-            a.href = `https://apclassroom.collegeboard.org/${getCourseId()}/assessments/results/${assignment.id}`
-            a.innerHTML = `(${assignment.score}/${assignment.max_score})`
-            resultsCell.innerHTML += " "
+            a.href = `https://apclassroom.collegeboard.org/${getCourseId()}/assessments/results/${assignment.id}`;
+            a.innerHTML = `(${assignment.score}/${assignment.max_score})`;
+            resultsCell.innerHTML += " ";
             resultsCell.appendChild(a);
           }
         }
