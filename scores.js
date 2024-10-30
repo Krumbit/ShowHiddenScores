@@ -4,7 +4,7 @@
 // @version      2024-10-29
 // @description  try to take over the world!
 // @author       You
-// @match        https://apclassroom.collegeboard.org/*/assignments?status=completed
+// @match        https://apclassroom.collegeboard.org/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
@@ -15,7 +15,7 @@
   (function (open) {
     XMLHttpRequest.prototype.open = function () {
       this.addEventListener("load", function () {
-        if (this.responseURL.includes("chameleon")) {
+        if (this.responseURL.includes("chameleon/student_assignments/" + getCourseId() + "/?status=completed")) {
           const assignments = JSON.parse(this.response).assignments;
           const assignmentsTable = document.getElementsByClassName("student_assignments_table")[0];
           for (const index in assignments) {
