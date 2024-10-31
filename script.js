@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name         ShowHiddenScores
 // @namespace    http://tampermonkey.net/
-// @version      1.0.5
+// @version      1.0.6
 // @description  Displays hidden scores on CollegeBoard assessments
 // @author       Krumbit
 // @match        https://apclassroom.collegeboard.org/*
@@ -39,7 +39,7 @@
           a.innerHTML = `(${assignment.score}/${assignment.max_score})`;
 
           // Add a space before the new link
-          resultsCell.innerHTML += "";
+          resultsCell.innerHTML += " ";
           // Append the new link to the results cell
           resultsCell.appendChild(a);
         }
