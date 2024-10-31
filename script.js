@@ -39,7 +39,7 @@
           a.innerHTML = `(${assignment.score}/${assignment.max_score})`;
 
           // Add a space before the new link
-          resultsCell.innerHTML += " ";
+          resultsCell.innerHTML += "";
           // Append the new link to the results cell
           resultsCell.appendChild(a);
         }
